@@ -5,10 +5,10 @@ import Filter from '../Filter/Filter'
 const Layout = ({ children }) => {
     return (
         <Box component={'div'} >
-            <Box component={'div'} display={'inline-grid'} >
+            <Box component={'div'} display={'inline-grid'} sx={{ width: '20%' }} >
                 <Filter></Filter>
             </Box>
-            <Box component={'div'} display={'inline-grid'}>
+            <Box component={'div'} display={'inline-grid'} sx={{ width: '80%' }}>
                 <main>{children}</main>
             </Box>
         </Box>
