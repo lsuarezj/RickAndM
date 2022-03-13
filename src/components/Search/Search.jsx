@@ -1,4 +1,4 @@
-import { TextField } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 import { alpha, styled } from '@mui/material/styles';
 import React from 'react'
 
@@ -29,22 +29,19 @@ const CssTextField = styled(TextField)({
 });
 
 const Search = ({ setSearch, updatePageNumber }) => {
-    let searchBtn = (e) => {
-        e.preventDefault();
-    };
 
     return (
         <form>
-            <div>
+            <Box width={'80vw'}>
                 <CssTextField id="Search" label="Search"
                     onChange={(e) => {
                         updatePageNumber(1);
                         setSearch(e.target.value);
                     }}
                     placeholder="Search for characters"
-                    type="text"
+                    type="text" fullWidth={true}
                 />
-            </div>
+            </Box>
         </form>
     );
 };

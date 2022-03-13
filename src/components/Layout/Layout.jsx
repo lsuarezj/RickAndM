@@ -5,9 +5,9 @@ import Filter from '../Filter/Filter'
 const Layout = ({ children }) => {
     return (
         <Box component={'div'} >
-            {/* <Box component={'div'} display={'inline-grid'} sx={{ width: '15%' }} >
+            <Box component={'div'} display={'inline-grid'} sx={{ width: '15%' }} >
                 <Filter></Filter>
-            </Box> */}
+            </Box>
             <Box component={'div'} display={'inline-grid'} sx={{ width: '80%' }}>
                 <main>{children}</main>
             </Box>

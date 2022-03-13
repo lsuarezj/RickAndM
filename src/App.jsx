@@ -18,9 +18,12 @@ function App() {
   let [characters, setCharacters] = useState([]);
   let [pageNumber, updatePageNumber] = useState(1);
   let [search, setSearch] = useState("");
-  let [TotalPageCount, setTotalPageCount] = useState(0)
+  let [TotalPageCount, setTotalPageCount] = useState(0);
+  let [status, updateStatus] = useState("");
+  let [gender, updateGender] = useState("");
+  let [species, updateSpecies] = useState("");
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
 
   const getData = async () => {
@@ -49,10 +52,10 @@ function App() {
           <Box m="auto">
             <h1 className="text-center mb-3">Characters</h1>
           </Box>
-          <Box m="auto">
+          <Box m="auto" sx={{ padding: '5px' }}>
             <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
           </Box>
-          <Box m="auto">
+          <Box m="auto" sx={{ padding: '5px' }}>
             <Pagination size='large' count={TotalPageCount} page={pageNumber} onChange={handlePageChange} color="primary" />
           </Box>
           <Box>

@@ -44,7 +44,10 @@
   }
 }
 
+.Alive {
+  color: green !important;
+}
 
-#Search{
-  width: 50vw;
+.Dead {
+  color: red !important;
 }
