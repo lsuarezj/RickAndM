@@ -9,14 +9,13 @@ const Character = ({ character }) => {
             filter: `grayscale(1)`
         },
         characterAlive: {
-            border: 'Solid 5px green'
+            boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2);'
         }
     });
     const classes = mStyles();
-    console.log(character.status == 'Alive' ? classes.characterAlive : classes.characterDead);
 
     return (
-        <Card className={(character.status == 'Alive' ? classes.characterAlive : classes.characterDead)}>
+        <Card className={(character.status === 'Alive' ? classes.characterAlive : classes.characterDead)}>
             <CardMedia
                 component="img"
                 image={character.image}
@@ -31,6 +30,7 @@ const Character = ({ character }) => {
                 <Typography variant="body2" component="div">
                     <Typography color="text.secondary" ><strong>Species: </strong>{character.species}</Typography>
                     <Typography color="text.secondary"><strong>Gender: </strong>{character.gender}</Typography>
+                    <Typography color="text.secondary"><strong>Origin: </strong>{character.origin.name}</Typography>
                 </Typography>
             </CardContent>
         </Card>

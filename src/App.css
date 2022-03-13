@@ -15,7 +15,8 @@
 
 .App,
 .App-header {
-  background-color: #282c34;
+  background-color: #2960be;
+  background-color: #2a303a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,6 +24,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 30px;
 }
 
 .App-link {
@@ -40,4 +42,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+#Search{
+  width: 50vw;
 }
